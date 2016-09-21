@@ -11,11 +11,33 @@ import Foundation
 public func questionOne() -> Int {
     var sum = 0
     
-    for number in 0..<1000 {
+    for number in 1..<1000 {
         if number % 3 == 0 || number % 5 == 0 {
             sum += number
         }
     }
     
     return sum
+}
+
+public func questionThree(upperBound: Int) -> Int {
+    var possibilities = Array(2..<upperBound)
+    var primeNumbers: [Int] = [];
+    var result = 2
+    
+    while let thisPrime = possibilities.first {
+        primeNumbers.append(thisPrime)
+        
+        possibilities = possibilities.filter { item in
+            item % thisPrime != 0
+        }
+    }
+    
+    for prime in primeNumbers {
+        if upperBound % prime == 0 {
+            result = prime
+        }
+    }
+    
+    return result
 }

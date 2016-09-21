@@ -22,7 +22,13 @@ class ProjectEulerTests: XCTestCase {
     func testQuestionOne() {
         let result = questionOne()
         let expected = 233168
-        XCTAssertEqual(result, expected)
+        XCTAssertEqual(expected, result)
+    }
+    
+    func testQuestionThree() {
+        let result = questionThree(upperBound: 13195)
+        let expected = 29
+        XCTAssertEqual(expected, result)
     }
     
 }
