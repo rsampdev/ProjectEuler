@@ -10,6 +10,7 @@
 		335995AB1D92C86400075E69 /* ProjectEuler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335995A11D92C86400075E69 /* ProjectEuler.framework */; };
 		335995B01D92C86400075E69 /* ProjectEulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335995AF1D92C86400075E69 /* ProjectEulerTests.swift */; };
 		335995B21D92C86400075E69 /* ProjectEuler.h in Headers */ = {isa = PBXBuildFile; fileRef = 335995A41D92C86400075E69 /* ProjectEuler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		335995BC1D92C87700075E69 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335995BB1D92C87700075E69 /* Questions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		335995AA1D92C86400075E69 /* ProjectEulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectEulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		335995AF1D92C86400075E69 /* ProjectEulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEulerTests.swift; sourceTree = "<group>"; };
 		335995B11D92C86400075E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		335995BB1D92C87700075E69 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				335995A41D92C86400075E69 /* ProjectEuler.h */,
 				335995A51D92C86400075E69 /* Info.plist */,
+				335995BB1D92C87700075E69 /* Questions.swift */,
 			);
 			path = ProjectEuler;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					335995A01D92C86400075E69 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					335995A91D92C86400075E69 = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				335995BC1D92C87700075E69 /* Questions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +325,7 @@
 		335995B61D92C86400075E69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,6 +337,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rsampdev.ProjectEuler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,6 +345,7 @@
 		335995B71D92C86400075E69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +364,7 @@
 		335995B91D92C86400075E69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ProjectEulerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rsampdev.ProjectEulerTests;
@@ -367,6 +376,7 @@
 		335995BA1D92C86400075E69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ProjectEulerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rsampdev.ProjectEulerTests;
