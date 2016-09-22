@@ -31,4 +31,10 @@ class ProjectEulerTests: XCTestCase {
         XCTAssertEqual(expected, result)
     }
     
+    func testQuestionTen() {
+        let result = questionTen(upperBound: 10)
+        let expected = 17
+        XCTAssertEqual(expected, result)
+    }
+    
 }

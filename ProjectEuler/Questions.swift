@@ -21,6 +21,8 @@ public func questionOne() -> Int {
 }
 
 public func questionThree(upperBound: Int) -> Int {
+    precondition(upperBound >= 2, "Upperbound should never be less than 2")
+    
     var possibilities = Array(2..<upperBound)
     var primeNumbers: [Int] = [];
     var result = 2
@@ -40,4 +42,25 @@ public func questionThree(upperBound: Int) -> Int {
     }
     
     return result
+}
+
+public func questionTen(upperBound: Int) -> Int {
+    precondition(upperBound >= 2, "Upperbound should never be less than 2")
+    
+    var possibilities = Array(2..<upperBound)
+    var primeNumbers: [Int] = [];
+    var sum = 0
+    
+    while let thisPrime = possibilities.first {
+        primeNumbers.append(thisPrime)
+        possibilities = possibilities.filter { item in
+            item % thisPrime != 0
+        }
+    }
+    
+    for number in primeNumbers {
+        sum += number
+    }
+    
+    return sum
 }
