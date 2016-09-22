@@ -64,3 +64,13 @@ public func questionTen(upperBound: Int) -> Int {
     
     return sum
 }
+
+public func questionTwenty() -> Int {
+    var result = 1
+    
+    for number in 1...10 {
+        result *= number
+    }
+    
+    return result
+}
